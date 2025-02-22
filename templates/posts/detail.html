@@ -3,10 +3,20 @@
 {% block title %}{{ post.title }}{% endblock title %}
 
 {% block content %}
+<div class="section">
 <h1>{{ post.title }}</h1>
 <h3>{{ post.subtitle }}</h3>
-<small>Created on: {{ post.created_on }}</small>
-<small>By: {{ post.author }}</small>
-<p>{{ post.body }}</p>
+<hr />
+<p class="post-body">{{ post.body }}</p>
+<hr />
+<small class="right">By: {{ post.author }}</small> 
+<small class="right">Created on: {{ post.created_on }} |</small>
+<br />
 
+<a href="{% url 'edit' post.id %}" class="btn btn-outline-dark">Edit</a>
+    <form action="{% url 'delete' post.id %}" method="post" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-outline-dark">Delete</button>
+    </form>
+</div>
 {% endblock content %}

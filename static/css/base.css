@@ -1,3 +1,58 @@
 body {
-	background-color: rgb(99, 106, 114);
+	font-family: 'Candara', sans-serif;
+	background-color: #b5bbe1;
+	font-size: 18px;
+}
+
+.section {
+	background-color: rgb(255, 255, 255, 0.5);
+	border: 1px solid gray;
+	padding: 10px;
+	margin-top: 10px;
+	border-radius: 15px;
+}
+
+.navbar {
+	background-color: rgb(255, 255, 255, 0.5);
+	border: 1px solid gray;
+}
+
+.navbar-nav {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+}
+
+.card-title {
+	font-size: 25px;
+	font-weight:bold
+}
+
+.text-body-secondary  {
+	font-style: italic;
+}
+
+.card-body {
+	background-color: rgb(181, 187, 255, 0.75);
+	border: 1px solid gray;
+	padding: 10px;
+}
+
+.card-info {
+	display: flex;
+	flex-direction: row;
+	justify-content:space-between;
+	width: 100%;
+}
+
+small {
+	margin-left: 5px;
+}
+
+.right {
+	float: right;
+}
+
+.btn {
+	font-size: 17px;
 }
